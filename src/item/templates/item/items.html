@@ -1,0 +1,142 @@
+{% extends 'layouts/base.html' %}
+
+<title>{% block title %} item {% endblock title %}</title>
+
+{% block content%} 
+<div class="card">
+  <div class="card-body">
+  <div class="table-responsive">
+  <table class="table table-hover" style="caption-side: top;">
+		<caption>
+		<div class="table-caption-mul">
+		<p>Items</p>
+		<p>Items</p>
+		<p>Items</p>
+		</div>
+		
+		</caption>
+		<thead class="table-dark">
+			<tr>
+			<th scope="col">Item Id</th>
+			<th scope="col">Name</th>
+			<th scope="col">Created</th>
+			<th scope="col">Updated</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			{% for obj in object_list %} 
+				<tr class="clickable" onclick="window.location='{{obj.get_absolute_url}}'">
+					<th scope="row">{{obj.itemCode}}</th></a>
+					<td>{{obj.name}}</td>
+					<td>{{obj.created}}</td>
+					<td>{{obj.updated}}</td>
+				</tr>
+			
+			{% endfor %} 
+		</tbody>
+
+		<table class="table table-hover" style="caption-side: top;">
+		<caption>
+		<div class="table-caption-mul">
+		<p>Items</p>
+		<p>Items</p>
+		<p>Items</p>
+		</div>
+		
+		</caption>
+		<thead class="table-dark">
+			<tr>
+			<th scope="col">Item Id</th>
+			<th scope="col">Name</th>
+			<th scope="col">Created</th>
+			<th scope="col">Updated</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			{% for obj in object_list %} 
+				<tr class="clickable" onclick="window.location='{{obj.get_absolute_url}}'">
+					<th scope="row">{{obj.itemCode}}</th></a>
+					<td>{{obj.name}}</td>
+					<td>{{obj.created}}</td>
+					<td>{{obj.updated}}</td>
+				</tr>
+			
+			{% endfor %} 
+		</tbody>
+
+		<table class="table table-hover" style="caption-side: top;">
+		<caption>
+		<div class="table-caption-mul">
+		<p>Items</p>
+		<p>Items</p>
+		<p>Items</p>
+		</div>
+		
+		</caption>
+		<thead class="table-dark">
+			<tr>
+			<th scope="col">Item Id</th>
+			<th scope="col">Name</th>
+			<th scope="col">Created</th>
+			<th scope="col">Updated</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			{% for obj in object_list %} 
+				<tr class="clickable" onclick="window.location='{{obj.get_absolute_url}}'">
+					<th scope="row">{{obj.itemCode}}</th></a>
+					<td>{{obj.name}}</td>
+					<td>{{obj.created}}</td>
+					<td>{{obj.updated}}</td>
+				</tr>
+			
+			{% endfor %} 
+		</tbody>
+
+		<table class="table table-hover" style="caption-side: top;">
+		<caption>
+		<div class="table-caption-mul">
+		<p>Items</p>
+		<p>Items</p>
+		<p>Items</p>
+		</div>
+		
+		</caption>
+		<thead class="table-dark">
+			<tr>
+			<th scope="z">Item Id</th>
+			<th scope="col">Name</th>
+			<th scope="col">Created</th>
+			<th scope="col">Updated</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			{% for obj in object_list %} 
+				<tr class="clickable" onclick="window.location='{{obj.get_absolute_url}}'">
+					<th scope="row">{{obj.itemCode}}</th></a>
+					<td>{{obj.name}}</td>
+					<td>{{obj.created}}</td>
+					<td>{{obj.updated}}</td>
+				</tr>
+			
+			{% endfor %} 
+		</tbody>
+		 {% comment %} <tfoot class='table-light'>
+   			<tr>
+			<th scope="col">Item Id</th>
+			<th scope="col">Name</th>
+			<th scope="col">Created</th>
+			<th scope="col">Updated</th>
+			</tr>
+  		</tfoot> {% endcomment %}
+	</table>
+  </div>
+  	
+  </div>
+</div>
+
+{% endblock content %}

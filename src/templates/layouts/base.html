@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		{% comment %}
+		<!-- favicon -->
+		<link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
+		{% endcomment %}
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+		<!-- jquery -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	
+		<!-- Dropzone js -->
+		{% comment %} <link rel="stylesheet" href="{% static 'dropzone.css' %}" />
+		<script src="{% static 'dropzone.js' %}" defer></script>
+	 {% endcomment %}
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+	{% block blockcss %} {% endblock blockcss %}
+		<!-- Custom js & css -->
+
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		{% block scripts %} {% endblock scripts %}
+
+		<title>Inventory | {% block title %}{% endblock title %}</title>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-3 px-1 d-none d-md-block position-fixed" id="sticky-sidebar">
+					{% include 'includes/sidebar.html' %}
+				</div>
+				<div class="col offset-lg-3" id="main">
+					{% block content %} {% endblock content %}
+				</div>
+			</div>
+		</div>
+	
+		
+
+	
+		<!-- Bootstrap js -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+	
+	</body>
+</html>
